@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="keywords" content="Custom Music Player" />
+        <meta
+            name="description"
+            content="Custom Design of a Functional Music Player, Made in Vanilla JavaScript"
+        />
+        <meta name="author" content="Abdulla Faizov" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link href="./style.css" type="text/css" rel="stylesheet" />
+        <script src="./app.js" defer></script>
+        <title>Music Player</title>
+    </head>
+    <body>
+        <audio id="audio" src=""></audio>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                <h2>Music</h2>
+            </div>
+            <div class="counter">
+                <p><span class="current-track">1</span> / <span class="total-tracks">3</span></p>
+            </div>
+            <div class="first-half">
+                <div class="image-wrapper">
+                    <img id="album-image" src="" />
+                </div>
+                <div class="volume-wrapper">
+                    <i class="fas fa-volume-up" id="unmute"></i>
+                    <i class="fas fa-volume-mute" id="mute"></i>
+                    <p class="volume-display">100</p>
+                    <input
+                        id="volume-slider"
+                        type="range"
+                        name="volume"
+                        min="0"
+                        max="100"
+                        step="1"
+                        value="100"
+                    />
+                </div>
+            </div>
+            <div class="second-half">
+                <div class="info-wrapper">
+                    <h1 class="song">Song Name</h1>
+                    <h3 class="singer">Singer Name</h3>
+                </div>
+                <div class="buttons-wrapper">
+                    <div class="buttons">
+                        <i class="fas fa-step-backward"></i>
+                        <i class="fas fa-play" id="play-button"></i>
+                        <i class="fas fa-pause" id="pause-button"></i>
+                        <i class="fas fa-step-forward"></i>
+                    </div>
+                </div>
+                <div class="slider-wrapper">
+                    <p id="progressed-time">
+                        0:00
+                    </p>
+                    <input
+                        id="slider"
+                        name="slider"
+                        type="range"
+                        min="0"
+                        max="100"
+                        step="1"
+                        value="0"
+                    />
+                    <p id="length-time">
+                        0:00
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
